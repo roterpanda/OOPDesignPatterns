@@ -1,6 +1,6 @@
 <?php
 
-namespace Saschabrandt\Designpatterns\SOLID\O;
+namespace roterpanda\Designpatterns\SOLID\O;
 
 abstract class Shape
 {

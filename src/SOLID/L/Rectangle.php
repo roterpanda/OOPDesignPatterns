@@ -1,6 +1,6 @@
 <?php
 
-namespace Saschabrandt\Designpatterns\SOLID\L;
+namespace roterpanda\Designpatterns\SOLID\L;
 
 class Rectangle extends Shape
 {

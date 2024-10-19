@@ -1,6 +1,6 @@
 <?php
 
-namespace Saschabrandt\Designpatterns\OOPPrinciples\Composition;
+namespace roterpanda\Designpatterns\OOPPrinciples\Composition;
 
 class Wheel
 {

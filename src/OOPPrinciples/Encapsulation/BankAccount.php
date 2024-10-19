@@ -1,6 +1,6 @@
 <?php
 
-namespace Saschabrandt\Designpatterns\OOPPrinciples\Encapsulation;
+namespace roterpanda\Designpatterns\OOPPrinciples\Encapsulation;
 
 /**
  * Class BankAccount
@@ -9,7 +9,7 @@ namespace Saschabrandt\Designpatterns\OOPPrinciples\Encapsulation;
  * It demonstrates the principle of encapsulation by keeping the balance property private and providing public methods
  * to interact with it.
  *
- * @package Saschabrandt\Designpatterns\OOPPrinciples\Encapsulation
+ * @package roterpanda\Designpatterns\OOPPrinciples\Encapsulation
  */
 class BankAccount
 {

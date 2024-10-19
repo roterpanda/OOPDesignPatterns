@@ -1,6 +1,6 @@
 <?php
 
-namespace Saschabrandt\Designpatterns\SOLID\D;
+namespace roterpanda\Designpatterns\SOLID\D;
 
 class Car
 {

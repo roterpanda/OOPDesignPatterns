@@ -1,7 +1,7 @@
 <?php
 
 use PHPUnit\Framework\TestCase;
-use Saschabrandt\Designpatterns\OOPPrinciples\Encapsulation\BankAccount;
+use roterpanda\Designpatterns\OOPPrinciples\Encapsulation\BankAccount;
 
 
 class BankAccountTest extends TestCase

@@ -1,14 +1,15 @@
 <?php
 
 declare(strict_types=1);
-use Saschabrandt\Designpatterns\SOLID\D\Car;
-use Saschabrandt\Designpatterns\SOLID\D\Engine;
-use Saschabrandt\Designpatterns\SOLID\L\Rectangle;
-use Saschabrandt\Designpatterns\SOLID\L\Square;
-use Saschabrandt\Designpatterns\SOLID\O\Circle;
-use Saschabrandt\Designpatterns\SOLID\S\EmailSender;
-use Saschabrandt\Designpatterns\SOLID\S\User;
-use Saschabrandt\Designpatterns\SOLID\S\UserService;
+use roterpanda\Designpatterns\SOLID\D\Car;
+use roterpanda\Designpatterns\SOLID\D\Engine;
+use roterpanda\Designpatterns\SOLID\I\Sphere;
+use roterpanda\Designpatterns\SOLID\L\Rectangle;
+use roterpanda\Designpatterns\SOLID\L\Square;
+use roterpanda\Designpatterns\SOLID\O\Circle;
+use roterpanda\Designpatterns\SOLID\S\EmailSender;
+use roterpanda\Designpatterns\SOLID\S\User;
+use roterpanda\Designpatterns\SOLID\S\UserService;
 
 require 'vendor/autoload.php';
 
@@ -68,10 +69,10 @@ echo 'Square area: ' . $square->getArea() . PHP_EOL;
  * By separating the interfaces based on the methods required by each class, we avoid forcing classes to implement unnecessary methods.
  */
 
-$circle = new \Saschabrandt\Designpatterns\SOLID\I\Circle(5);
+$circle = new \roterpanda\Designpatterns\SOLID\I\Circle(5);
 echo 'Circle area: ' . $circle->getArea() . PHP_EOL;
 
-$sphere = new \Saschabrandt\Designpatterns\SOLID\I\Sphere(5);
+$sphere = new Sphere(5);
 echo 'Sphere area: ' . $sphere->getArea() . PHP_EOL;
 echo 'Sphere volume: ' . $sphere->getVolume() . PHP_EOL;
 

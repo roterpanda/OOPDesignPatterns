@@ -1,6 +1,6 @@
 <?php
 
-namespace Saschabrandt\Designpatterns\SOLID\I;
+namespace roterpanda\Designpatterns\SOLID\I;
 
 interface IShape3D
 {

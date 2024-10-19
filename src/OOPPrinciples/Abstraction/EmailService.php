@@ -1,6 +1,6 @@
 <?php
 
-namespace Saschabrandt\Designpatterns\OOPPrinciples\Abstraction;
+namespace roterpanda\Designpatterns\OOPPrinciples\Abstraction;
 
 class EmailService
 {

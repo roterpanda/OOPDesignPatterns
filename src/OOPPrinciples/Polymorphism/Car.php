@@ -1,6 +1,6 @@
 <?php
 
-namespace Saschabrandt\Designpatterns\OOPPrinciples\Polymorphism;
+namespace roterpanda\Designpatterns\OOPPrinciples\Polymorphism;
 
 class Car extends Vehicle
 {

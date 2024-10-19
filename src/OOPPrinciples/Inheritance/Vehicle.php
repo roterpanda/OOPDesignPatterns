@@ -1,6 +1,6 @@
 <?php
 
-namespace Saschabrandt\Designpatterns\OOPPrinciples\Inheritance;
+namespace roterpanda\Designpatterns\OOPPrinciples\Inheritance;
 
 class Vehicle
 {

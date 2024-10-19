@@ -1,6 +1,6 @@
 <?php
 
-namespace Saschabrandt\Designpatterns\OOPPrinciples\Coupling;
+namespace roterpanda\Designpatterns\OOPPrinciples\Coupling;
 
 class EmailSender implements INotificationService
 {

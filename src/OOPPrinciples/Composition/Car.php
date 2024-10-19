@@ -2,8 +2,8 @@
 
 namespace Saschabrandt\Designpatterns\OOPPrinciples\Composition;
 
-use Saschabrandt\Designpatterns\OOPPrinciples\Composition\Engine;
-use Saschabrandt\Designpatterns\OOPPrinciples\Composition\Wheel;
+use roterpanda\Designpatterns\OOPPrinciples\Composition\Engine;
+use roterpanda\Designpatterns\OOPPrinciples\Composition\Wheel;
 
 class Car
 {

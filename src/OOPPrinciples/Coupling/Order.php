@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Saschabrandt\Designpatterns\OOPPrinciples\Coupling;
+namespace roterpanda\Designpatterns\OOPPrinciples\Coupling;
 
 class Order
 {

@@ -1,6 +1,6 @@
 <?php
 
-namespace Saschabrandt\Designpatterns\SOLID\S;
+namespace roterpanda\Designpatterns\SOLID\S;
 
 class EmailSender
 {
