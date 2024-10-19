@@ -1,0 +1,18 @@
+{
+    "name": "saschabrandt/designpatterns",
+    "type": "project",
+    "autoload": {
+        "psr-4": {
+            "Saschabrandt\\Designpatterns\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Sascha Brandt",
+            "email": "sascha.brandt@hva.nl"
+        }
+    ],
+    "require-dev": {
+        "phpunit/phpunit": "^11.3"
+    }
+}
