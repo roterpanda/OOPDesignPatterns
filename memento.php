@@ -7,18 +7,78 @@ use roterpanda\Designpatterns\Behavioural\Memento\History;
 
 require 'vendor/autoload.php';
 
-$editor = new Editor('Design Patterns', 'The design patterns are a collection of best practices in software design');
+$editor = new Editor('', '');
 $history = new History($editor);
-echo 'Current title: ' . $editor->getTitle() . PHP_EOL;
 
-$history->backup();
-$history->showHistory();
+function printDivider(): void
+{
+    print (str_repeat('-', 50) . PHP_EOL);
+}
 
-$editor->setTitle('Changed title');
-echo 'Changing title. Current title: ' . $editor->getTitle() . PHP_EOL;
-$history->showHistory();
+function showUserOptions(): void
+{
+    print '1. Set title' . PHP_EOL;
+    print '2. Set content' . PHP_EOL;
+    print '3. Show document' . PHP_EOL;
+    print '4. Undo' . PHP_EOL;
+    print '5. Show history' . PHP_EOL;
+    print '6. Exit' . PHP_EOL;
+}
 
-$history->undo();
-$history->showHistory();
+function getUserOption(): int
+{
+    return (int) readline('Choose an option: ');
+}
 
-echo 'Current title: ' . $editor->getTitle() . PHP_EOL;
+function setEditorTitle(Editor $editor): void
+{
+    $user_title = readline('Set the title of the document: ');
+    $editor->setTitle($user_title);
+}
+
+function setEditorContent(Editor $editor): void
+{
+    $user_content = readline('Set the content of the document: ');
+    $editor->setContent($user_content);
+}
+
+function processUserOption(Editor $editor, History $history): void
+{
+    $option = getUserOption();
+
+    switch ($option) {
+        case 1:
+            $history->backup();
+            setEditorTitle($editor);
+            break;
+        case 2:
+            $history->backup();
+            setEditorContent($editor);
+            break;
+        case 3:
+            print $editor->getTitle() . PHP_EOL;
+            print $editor->getContent() . PHP_EOL;
+            break;
+        case 4:
+            $history->undo();
+            break;
+        case 5:
+            $history->showHistory();
+            break;
+        case 6:
+            exit;
+        default:
+            print 'Invalid option' . PHP_EOL;
+    }
+}
+
+printDivider();
+print 'Text Editor' . PHP_EOL;
+printDivider();
+
+while (true) {
+    showUserOptions();
+    processUserOption($editor, $history);
+    printDivider();
+}
+
