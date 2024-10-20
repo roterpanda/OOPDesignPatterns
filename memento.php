@@ -7,7 +7,7 @@ use roterpanda\Designpatterns\Behavioural\Memento\History;
 
 require 'vendor/autoload.php';
 
-$editor = new Editor('', '');
+$editor = new Editor();
 $history = new History($editor);
 
 function printDivider(): void
@@ -56,8 +56,7 @@ function processUserOption(Editor $editor, History $history): void
             setEditorContent($editor);
             break;
         case 3:
-            print $editor->getTitle() . PHP_EOL;
-            print $editor->getContent() . PHP_EOL;
+            $editor->show();
             break;
         case 4:
             $history->undo();

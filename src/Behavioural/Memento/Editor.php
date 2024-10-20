@@ -7,7 +7,7 @@ namespace roterpanda\Designpatterns\Behavioural\Memento;
  */
 class Editor
 {
-    public function __construct(public string $title, public string $content)
+    public function __construct(public string $title = '', public string $content = '')
     {
     }
 
@@ -20,6 +20,12 @@ class Editor
     {
         $this->title = $state->getTitle();
         $this->content = $state->getContent();
+    }
+
+    public function show(): void
+    {
+        echo 'Title: ' . $this->title . PHP_EOL;
+        echo 'Content: ' . $this->content . PHP_EOL;
     }
 
     public function getTitle(): string
