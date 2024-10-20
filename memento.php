@@ -30,16 +30,15 @@ function getUserOption(): int
     return (int) readline('Choose an option: ');
 }
 
-function setEditorTitle(Editor $editor): void
+function setEditorProperty(Editor $editor, string $property, History $history): void
 {
-    $user_title = readline('Set the title of the document: ');
-    $editor->setTitle($user_title);
-}
-
-function setEditorContent(Editor $editor): void
-{
-    $user_content = readline('Set the content of the document: ');
-    $editor->setContent($user_content);
+    $user_input = readline("Set the $property of the document: ");
+    $history->backup();
+    if ($property === 'title') {
+        $editor->setTitle($user_input);
+    } elseif ($property === 'content') {
+        $editor->setContent($user_input);
+    }
 }
 
 function processUserOption(Editor $editor, History $history): void
@@ -48,12 +47,10 @@ function processUserOption(Editor $editor, History $history): void
 
     switch ($option) {
         case 1:
-            $history->backup();
-            setEditorTitle($editor);
+            setEditorProperty($editor, 'title', $history);
             break;
         case 2:
-            $history->backup();
-            setEditorContent($editor);
+            setEditorProperty($editor, 'content', $history);
             break;
         case 3:
             $editor->show();
