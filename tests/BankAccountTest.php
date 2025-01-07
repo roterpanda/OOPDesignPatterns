@@ -1,10 +1,11 @@
 <?php
 
+use PHPUnit\Framework\Attributes\DataProvider;
 use PHPUnit\Framework\TestCase;
 use roterpanda\Designpatterns\OOPPrinciples\Encapsulation\BankAccount;
 
 
-class BankAccountTest extends TestCase
+final class BankAccountTest extends TestCase
 {
     public function testDepositIncreasesBalance()
     {
@@ -36,4 +37,22 @@ class BankAccountTest extends TestCase
 
         $account->withdraw(amount: 20);
     }
+
+    #[DataProvider('depositProvider')]
+    public function testDeposit(int $initialBalance, int $deposit, int $expectedBalance)
+    {
+        $account = new BankAccount($initialBalance);
+        $account->deposit($deposit);
+        $this->assertEquals($expectedBalance, $account->getBalance());
+    }
+
+    public static function depositProvider()
+    {
+        return [
+            [0, 100, 100],
+            [50, 50, 100],
+            [100, 0, 100],
+        ];
+    }
+
 }
