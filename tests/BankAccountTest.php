@@ -49,9 +49,9 @@ final class BankAccountTest extends TestCase
     public static function depositProvider()
     {
         return [
-            [0, 100, 100],
-            [50, 50, 100],
-            [100, 0, 100],
+            "balance 0, add 100" => [0, 100, 100],
+            "balance 50, add 50" => [50, 50, 100],
+            "balance 100, add 0" => [100, 0, 100],
         ];
     }
 
