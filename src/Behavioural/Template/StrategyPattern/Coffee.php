@@ -5,8 +5,20 @@ namespace roterpanda\Designpatterns\Behavioural\Template\StrategyPattern;
 class Coffee implements Beverage
 {
 
-    function prepare(): void
+    public function prepare(): void
     {
-        // TODO: Implement prepare() method.
+        $this->grindCoffee();
+        $this->brew();
     }
+
+    public function grindCoffee(): void
+    {
+        echo "Grinding coffee beans" . PHP_EOL;
+    }
+
+    public function brew(): void
+    {
+        echo "Brewing coffee for 5 minutes" . PHP_EOL;
+    }
+
 }
