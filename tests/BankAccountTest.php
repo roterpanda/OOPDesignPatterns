@@ -46,7 +46,7 @@ final class BankAccountTest extends TestCase
         $this->assertEquals($expectedBalance, $account->getBalance());
     }
 
-    public static function depositProvider()
+    public static function depositProvider(): array
     {
         return [
             "balance 0, add 100" => [0, 100, 100],
